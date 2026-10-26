@@ -1,0 +1,305 @@
+// School Contact and Partner Contact audience types.
+// Represents both the school-level org and the named contact at each school.
+
+export interface PartnerContact {
+  name: string;
+  email: string | null;   // null = no email on file
+  phone: string;
+  role: string;
+}
+
+export interface SchoolPartner {
+  id: string;
+  schoolName: string;
+  aliasName: string;
+  category: string;         // e.g. 'University', 'Community College', 'Allied Health School'
+  website: string;
+  address: string;
+  contactName: string;
+  contactEmail: string | null; // null = no email on file (excluded from Bulk Email, PRD 8)
+  contactRole: string;
+  city: string;
+  state: string;
+  programTypes: string[];   // e.g. ['BSN', 'DNP'] — also surfaced as "Associated Discipline"
+  activeSchedules: number;  // schedules currently running
+  activeRequests: number;   // open slot requests
+  activeContractsCount: number;
+  expiredContractsCount: number;
+  partnerSince: string;     // YYYY
+  contacts: PartnerContact[]; // Program Contacts mini-table on the About tab
+}
+
+// Anchored to known platform tenants + representative partner schools.
+// Active schedules across all partners sum to ~792 (platform KPI).
+export const mockSchoolPartners: SchoolPartner[] = [
+  {
+    id: 'sp-001',
+    schoolName: 'Bowie State University',
+    aliasName: 'BSU',
+    category: 'University',
+    website: 'www.bowiestate.edu',
+    address: '14000 Jericho Park Rd',
+    contactName: 'Dr. Renee Blackwell',
+    contactEmail: 'r.blackwell@bowiestate.edu',
+    contactRole: 'Director of Clinical Education',
+    city: 'Bowie',
+    state: 'MD',
+    programTypes: ['BSN', 'Pre-Licensure RN'],
+    activeSchedules: 229,
+    activeRequests: 14,
+    activeContractsCount: 4,
+    expiredContractsCount: 1,
+    partnerSince: '2019',
+    contacts: [
+      { name: 'Dr. Renee Blackwell', email: 'r.blackwell@bowiestate.edu', phone: '(301) 555-0401', role: 'Director of Clinical Education' },
+      { name: 'Marcus Ellery', email: 'm.ellery@bowiestate.edu', phone: '(301) 555-0402', role: 'Clinical Placement Assistant' },
+    ],
+  },
+  {
+    id: 'sp-002',
+    schoolName: 'Baylor University',
+    aliasName: 'Baylor',
+    category: 'University',
+    website: 'www.baylor.edu',
+    address: '700 S University Parks Dr',
+    contactName: 'Prof. Linda Marsh',
+    contactEmail: 'l.marsh@baylor.edu',
+    contactRole: 'Clinical Placement Coordinator',
+    city: 'Waco',
+    state: 'TX',
+    programTypes: ['MOT', 'DPT'],
+    activeSchedules: 87,
+    activeRequests: 6,
+    activeContractsCount: 3,
+    expiredContractsCount: 0,
+    partnerSince: '2021',
+    contacts: [
+      { name: 'Prof. Linda Marsh', email: 'l.marsh@baylor.edu', phone: '(254) 555-0403', role: 'Clinical Placement Coordinator' },
+      { name: 'Dana Whitfield', email: 'd.whitfield@baylor.edu', phone: '(254) 555-0404', role: 'Clinical Placement Assistant' },
+    ],
+  },
+  {
+    id: 'sp-003',
+    schoolName: 'Eastwood State University',
+    aliasName: 'ESU',
+    category: 'University',
+    website: 'www.eastwoodstate.edu',
+    address: '400 College Ave',
+    contactName: 'Marco Sullivan',
+    contactEmail: 'm.sullivan@eastwoodstate.edu',
+    contactRole: 'Associate Dean, Health Sciences',
+    city: 'Columbus',
+    state: 'OH',
+    programTypes: ['BSN', 'DNP', 'MS-SLP'],
+    activeSchedules: 141,
+    activeRequests: 9,
+    activeContractsCount: 3,
+    expiredContractsCount: 1,
+    partnerSince: '2020',
+    contacts: [
+      { name: 'Marco Sullivan', email: 'm.sullivan@eastwoodstate.edu', phone: '(614) 555-0405', role: 'Associate Dean, Health Sciences' },
+      { name: 'Priya Ramaswamy', email: 'p.ramaswamy@eastwoodstate.edu', phone: '(614) 555-0406', role: 'Clinical Placement Assistant' },
+    ],
+  },
+  {
+    id: 'sp-004',
+    schoolName: 'Capitol Nursing College',
+    aliasName: 'CNC',
+    category: 'College',
+    website: 'www.capitolnursing.edu',
+    address: '820 1st St NE',
+    contactName: 'Angela Pierce',
+    contactEmail: 'a.pierce@capitolnursing.edu',
+    contactRole: 'Clinical Coordinator',
+    city: 'Washington',
+    state: 'DC',
+    programTypes: ['BSN', 'LPN-to-RN'],
+    activeSchedules: 64,
+    activeRequests: 5,
+    activeContractsCount: 2,
+    expiredContractsCount: 0,
+    partnerSince: '2022',
+    contacts: [
+      { name: 'Angela Pierce', email: 'a.pierce@capitolnursing.edu', phone: '(202) 555-0407', role: 'Clinical Coordinator' },
+    ],
+  },
+  {
+    id: 'sp-005',
+    schoolName: 'Harrington School of Allied Health',
+    aliasName: 'Harrington',
+    category: 'Allied Health School',
+    website: 'www.harrington.edu',
+    address: '8600 Colesville Rd',
+    contactName: 'Dr. Victor Osei',
+    contactEmail: 'v.osei@harrington.edu',
+    contactRole: 'Program Director, Allied Health',
+    city: 'Silver Spring',
+    state: 'MD',
+    programTypes: ['BS Radiologic Technology', 'Respiratory Therapy', 'Medical Laboratory Science'],
+    activeSchedules: 52,
+    activeRequests: 4,
+    activeContractsCount: 2,
+    expiredContractsCount: 0,
+    partnerSince: '2021',
+    contacts: [
+      { name: 'Dr. Victor Osei', email: 'v.osei@harrington.edu', phone: '(301) 555-0408', role: 'Program Director, Allied Health' },
+      { name: 'Naomi Curtis', email: 'n.curtis@harrington.edu', phone: '(301) 555-0409', role: 'Clinical Placement Assistant' },
+    ],
+  },
+  {
+    id: 'sp-006',
+    schoolName: 'Lakewood Community College',
+    aliasName: 'LCC',
+    category: 'Community College',
+    website: 'www.lakewood.edu',
+    address: '51 Mannakee St',
+    contactName: 'Trina Hoffman',
+    contactEmail: 't.hoffman@lakewood.edu',
+    contactRole: 'Clinical Education Director',
+    city: 'Rockville',
+    state: 'MD',
+    programTypes: ['Pre-Licensure RN', 'LPN-to-RN'],
+    activeSchedules: 38,
+    activeRequests: 3,
+    activeContractsCount: 1,
+    expiredContractsCount: 0,
+    partnerSince: '2023',
+    contacts: [
+      { name: 'Trina Hoffman', email: 't.hoffman@lakewood.edu', phone: '(301) 555-0410', role: 'Clinical Education Director' },
+    ],
+  },
+  {
+    id: 'sp-007',
+    schoolName: 'Midlands University College of Pharmacy',
+    aliasName: 'Midlands',
+    category: 'University',
+    website: 'www.midlands.edu',
+    address: '4301 Jones Bridge Rd',
+    contactName: 'Dr. Yolanda Kim',
+    contactEmail: null, // no email on file — reachable path for the "excluded, no email on file" edge case (PRD 8)
+    contactRole: 'Pharmacy Practice Coordinator',
+    city: 'Bethesda',
+    state: 'MD',
+    programTypes: ['PharmD'],
+    activeSchedules: 29,
+    activeRequests: 2,
+    activeContractsCount: 1,
+    expiredContractsCount: 0,
+    partnerSince: '2022',
+    contacts: [
+      { name: 'Dr. Yolanda Kim', email: null, phone: '(301) 555-0411', role: 'Pharmacy Practice Coordinator' },
+    ],
+  },
+  {
+    id: 'sp-008',
+    schoolName: 'Western Texas Health Sciences University',
+    aliasName: 'WTHSU',
+    category: 'University',
+    website: 'www.wthsu.edu',
+    address: '2149 N Judge Ely Blvd',
+    contactName: 'Brett Calloway',
+    contactEmail: 'b.calloway@wthsu.edu',
+    contactRole: 'Clinical Rotation Manager',
+    city: 'Abilene',
+    state: 'TX',
+    programTypes: ['BSN', 'Pre-Licensure RN', 'DPT'],
+    activeSchedules: 47,
+    activeRequests: 5,
+    activeContractsCount: 2,
+    expiredContractsCount: 1,
+    partnerSince: '2020',
+    contacts: [
+      { name: 'Brett Calloway', email: 'b.calloway@wthsu.edu', phone: '(325) 555-0412', role: 'Clinical Rotation Manager' },
+      { name: 'Selena Marks', email: 's.marks@wthsu.edu', phone: '(325) 555-0413', role: 'Clinical Placement Assistant' },
+    ],
+  },
+  {
+    id: 'sp-009',
+    schoolName: 'Crestwood College of Nursing',
+    aliasName: 'CCN',
+    category: 'College',
+    website: 'www.crestwood.edu',
+    address: '60 State Cir',
+    contactName: 'Sandra Flores',
+    contactEmail: 's.flores@crestwood.edu',
+    contactRole: 'Director of Clinical Partnerships',
+    city: 'Annapolis',
+    state: 'MD',
+    programTypes: ['BSN', 'DNP'],
+    activeSchedules: 33,
+    activeRequests: 2,
+    activeContractsCount: 1,
+    expiredContractsCount: 0,
+    partnerSince: '2023',
+    contacts: [
+      { name: 'Sandra Flores', email: 's.flores@crestwood.edu', phone: '(410) 555-0414', role: 'Director of Clinical Partnerships' },
+    ],
+  },
+  {
+    id: 'sp-010',
+    schoolName: 'Northern Allied Health Institute',
+    aliasName: 'NAHI',
+    category: 'Allied Health School',
+    website: 'www.nahi.edu',
+    address: '400 Motter Ave',
+    contactName: 'Michael Johansson',
+    contactEmail: 'm.johansson@nahi.edu',
+    contactRole: 'Clinical Coordinator',
+    city: 'Frederick',
+    state: 'MD',
+    programTypes: ['Respiratory Therapy', 'Surgical Technology'],
+    activeSchedules: 22,
+    activeRequests: 1,
+    activeContractsCount: 1,
+    expiredContractsCount: 0,
+    partnerSince: '2024',
+    contacts: [
+      { name: 'Michael Johansson', email: 'm.johansson@nahi.edu', phone: '(301) 555-0415', role: 'Clinical Coordinator' },
+    ],
+  },
+  {
+    id: 'sp-011',
+    schoolName: 'Horizon Graduate School of Health Sciences',
+    aliasName: 'Horizon',
+    category: 'Graduate School',
+    website: 'www.horizonthealth.edu',
+    address: '901 N Stuart St',
+    contactName: 'Dr. Priya Mehta',
+    contactEmail: 'p.mehta@horizonthealth.edu',
+    contactRole: 'Graduate Clinical Placement Director',
+    city: 'Arlington',
+    state: 'VA',
+    programTypes: ['DNP', 'MSN', 'MOT'],
+    activeSchedules: 31,
+    activeRequests: 3,
+    activeContractsCount: 2,
+    expiredContractsCount: 0,
+    partnerSince: '2021',
+    contacts: [
+      { name: 'Dr. Priya Mehta', email: 'p.mehta@horizonthealth.edu', phone: '(703) 555-0416', role: 'Graduate Clinical Placement Director' },
+      { name: 'Owen Barrett', email: 'o.barrett@horizonthealth.edu', phone: '(703) 555-0417', role: 'Clinical Placement Assistant' },
+    ],
+  },
+  {
+    id: 'sp-012',
+    schoolName: 'Chesapeake School of Physical Therapy',
+    aliasName: 'CSPT',
+    category: 'Allied Health School',
+    website: 'www.chesapeakept.edu',
+    address: '236 Cedar Park Rd',
+    contactName: 'Tom Brewer',
+    contactEmail: 't.brewer@chesapeakept.edu',
+    contactRole: 'Academic Coordinator of Clinical Education',
+    city: 'Annapolis',
+    state: 'MD',
+    programTypes: ['DPT'],
+    activeSchedules: 19,
+    activeRequests: 2,
+    activeContractsCount: 1,
+    expiredContractsCount: 0,
+    partnerSince: '2022',
+    contacts: [
+      { name: 'Tom Brewer', email: 't.brewer@chesapeakept.edu', phone: '(410) 555-0418', role: 'Academic Coordinator of Clinical Education' },
+    ],
+  },
+];
