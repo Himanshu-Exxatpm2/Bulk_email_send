@@ -1401,8 +1401,12 @@ export function ComposeEmailWizard({
       const def = audienceTemplates.find((t) => getTemplateByBulkId(t.id)?.isDefault) ?? audienceTemplates[0];
       handleTemplateSelect(def.id);
     }
-    // No template exists for this audience on this screen: open the create-a-template form straight away.
-    if (n === 2 && !continueWithoutTemplate && !selectedTemplate && !editing && audienceTemplates.length === 0) startEditing('new');
+    // No template exists for this audience on this screen: switch on "Continue without picking a template" and open the
+    // create-a-template form straight away.
+    if (n === 2 && !selectedTemplate && !editing && audienceTemplates.length === 0) {
+      setContinueWithoutTemplate(true);
+      startEditing('new');
+    }
     setStep(n);
     setMaxStep((m) => (n > m ? n : m));
   }
@@ -1640,7 +1644,7 @@ export function ComposeEmailWizard({
     }
     if (record && eDefault) setDefaultTemplate(record.id);
     toast.success(editing === 'edit' && templateRecord?.type !== 'Standard' ? 'Template saved.' : 'Template created.');
-    if (record?.bulkId) handleTemplateSelect(record.bulkId);
+    if (record?.bulkId) { handleTemplateSelect(record.bulkId); setContinueWithoutTemplate(false); }
     setEditing(null);
     setAtBody(null);
   }
