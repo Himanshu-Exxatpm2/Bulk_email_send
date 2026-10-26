@@ -1,0 +1,662 @@
+[
+ [
+  "Student",
+  "First Name",
+  "first_name"
+ ],
+ [
+  "Student",
+  "Last Name",
+  "last_name"
+ ],
+ [
+  "Student",
+  "Email",
+  "email"
+ ],
+ [
+  "Student",
+  "School Name",
+  "school_name"
+ ],
+ [
+  "Student",
+  "Program",
+  "program"
+ ],
+ [
+  "Student",
+  "Cohort",
+  "cohort"
+ ],
+ [
+  "Student",
+  "Rotation Start Date",
+  "rotation_start_date"
+ ],
+ [
+  "Student",
+  "Rotation End Date",
+  "rotation_end_date"
+ ],
+ [
+  "Student",
+  "Site Name",
+  "site_name"
+ ],
+ [
+  "Student",
+  "Supervisor Name",
+  "supervisor_name"
+ ],
+ [
+  "Student",
+  "Onboarding Status",
+  "onboarding_status"
+ ],
+ [
+  "Student",
+  "Login URL",
+  "login_url"
+ ],
+ [
+  "Student",
+  "Student ID",
+  "student_id"
+ ],
+ [
+  "Student",
+  "Program Type",
+  "program_type"
+ ],
+ [
+  "School Contact",
+  "First Name",
+  "first_name"
+ ],
+ [
+  "School Contact",
+  "Last Name",
+  "last_name"
+ ],
+ [
+  "School Contact",
+  "Email",
+  "email"
+ ],
+ [
+  "School Contact",
+  "School Name",
+  "school_name"
+ ],
+ [
+  "School Contact",
+  "Request ID",
+  "request_id"
+ ],
+ [
+  "School Contact",
+  "Slot Status",
+  "slot_status"
+ ],
+ [
+  "School Contact",
+  "Schedule Count",
+  "schedule_count"
+ ],
+ [
+  "School Contact",
+  "Pending Students",
+  "pending_students"
+ ],
+ [
+  "School Contact",
+  "Contact Portal URL",
+  "contact_portal_url"
+ ],
+ [
+  "School Contact",
+  "Agreement Expiry Date",
+  "agreement_expiry_date"
+ ],
+ [
+  "Partner Contact",
+  "First Name",
+  "first_name"
+ ],
+ [
+  "Partner Contact",
+  "Last Name",
+  "last_name"
+ ],
+ [
+  "Partner Contact",
+  "Organization",
+  "organization"
+ ],
+ [
+  "Partner Contact",
+  "Email",
+  "email"
+ ],
+ [
+  "Partner Contact",
+  "Contract Renewal Date",
+  "contract_renewal_date"
+ ],
+ [
+  "Staff-Personnel",
+  "First Name",
+  "first_name"
+ ],
+ [
+  "Staff-Personnel",
+  "Last Name",
+  "last_name"
+ ],
+ [
+  "Staff-Personnel",
+  "Email",
+  "email"
+ ],
+ [
+  "Staff-Personnel",
+  "Department",
+  "department"
+ ],
+ [
+  "Staff-Personnel",
+  "Role",
+  "role"
+ ],
+ [
+  "Staff-Personnel",
+  "Portal URL",
+  "portal_url"
+ ],
+ [
+  "Candidate",
+  "First Name",
+  "first_name"
+ ],
+ [
+  "Candidate",
+  "Last Name",
+  "last_name"
+ ],
+ [
+  "Candidate",
+  "Email",
+  "email"
+ ],
+ [
+  "Candidate",
+  "Job Title",
+  "job_title"
+ ],
+ [
+  "Candidate",
+  "Hospital Name",
+  "hospital_name"
+ ],
+ [
+  "Candidate",
+  "Application Date",
+  "application_date"
+ ],
+ [
+  "Candidate",
+  "Stage",
+  "stage"
+ ],
+ [
+  "Candidate",
+  "Interview Date",
+  "interview_date"
+ ],
+ [
+  "Candidate",
+  "Offer Expiry Date",
+  "offer_expiry_date"
+ ],
+ [
+  "Candidate",
+  "Jobs Portal URL",
+  "jobs_portal_url"
+ ],
+ [
+  "Candidate",
+  "Recruiter Name",
+  "recruiter_name"
+ ],
+ [
+  "Preceptor",
+  "Name",
+  "name"
+ ],
+ [
+  "Preceptor",
+  "Site",
+  "site_name"
+ ],
+ [
+  "Preceptor",
+  "Location",
+  "location_name"
+ ],
+ [
+  "Preceptor",
+  "Shift",
+  "shift"
+ ],
+ [
+  "Preceptor",
+  "Assigned Schedule Reference",
+  "assigned_schedule_ref"
+ ],
+ [
+  "Placement Faculty/CI",
+  "Name",
+  "name"
+ ],
+ [
+  "Placement Faculty/CI",
+  "School",
+  "school_name"
+ ],
+ [
+  "Placement Faculty/CI",
+  "Student Roster Reference",
+  "student_roster_ref"
+ ],
+ [
+  "Student",
+  "Student Name",
+  "studentName"
+ ],
+ [
+  "Student",
+  "Email",
+  "email"
+ ],
+ [
+  "Student",
+  "School",
+  "school"
+ ],
+ [
+  "Student",
+  "Program",
+  "program"
+ ],
+ [
+  "Student",
+  "Cohort",
+  "cohort"
+ ],
+ [
+  "Student",
+  "Rotation Name",
+  "rotationName"
+ ],
+ [
+  "Student",
+  "Start Date",
+  "startDate"
+ ],
+ [
+  "Student",
+  "End Date",
+  "endDate"
+ ],
+ [
+  "Student",
+  "Location",
+  "locationName"
+ ],
+ [
+  "Student",
+  "Hospital",
+  "hospitalName"
+ ],
+ [
+  "Student",
+  "Onboarding Status",
+  "onboardingStatus"
+ ],
+ [
+  "Student",
+  "Onboarding Deadline",
+  "onboardingDeadline"
+ ],
+ [
+  "Student",
+  "Preceptor Name",
+  "preceptorName"
+ ],
+ [
+  "Student",
+  "Login URL",
+  "loginUrl"
+ ],
+ [
+  "School Contact",
+  "Contact Name",
+  "schoolContactName"
+ ],
+ [
+  "School Contact",
+  "School Name",
+  "schoolName"
+ ],
+ [
+  "School Contact",
+  "Coordinator Name",
+  "coordinatorName"
+ ],
+ [
+  "School Contact",
+  "Availability Name",
+  "availabilityName"
+ ],
+ [
+  "School Contact",
+  "Approved Slot Count",
+  "approvedSlotCount"
+ ],
+ [
+  "School Contact",
+  "Start Date",
+  "startDate"
+ ],
+ [
+  "School Contact",
+  "End Date",
+  "endDate"
+ ],
+ [
+  "School Contact",
+  "Location",
+  "locationName"
+ ],
+ [
+  "School Contact",
+  "Hospital",
+  "hospitalName"
+ ],
+ [
+  "School Contact",
+  "Submitted Date",
+  "submittedDate"
+ ],
+ [
+  "Partner Contact",
+  "Recipient Name",
+  "recipientName"
+ ],
+ [
+  "Partner Contact",
+  "Organization",
+  "organizationName"
+ ],
+ [
+  "Partner Contact",
+  "Announcement Body",
+  "announcementBody"
+ ],
+ [
+  "Partner Contact",
+  "Update Body",
+  "updateBody"
+ ],
+ [
+  "Partner Contact",
+  "Acknowledge By Date",
+  "acknowledgeByDate"
+ ],
+ [
+  "Staff-Personnel",
+  "Staff Name",
+  "staffName"
+ ],
+ [
+  "Staff-Personnel",
+  "Role",
+  "role"
+ ],
+ [
+  "Staff-Personnel",
+  "Department",
+  "department"
+ ],
+ [
+  "Staff-Personnel",
+  "Hospital",
+  "hospitalName"
+ ],
+ [
+  "Staff-Personnel",
+  "Subject",
+  "subject"
+ ],
+ [
+  "Staff-Personnel",
+  "Message Body",
+  "messageBody"
+ ],
+ [
+  "Candidate",
+  "Candidate Name",
+  "candidateName"
+ ],
+ [
+  "Candidate",
+  "Job Title",
+  "jobTitle"
+ ],
+ [
+  "Candidate",
+  "Hospital",
+  "hospitalName"
+ ],
+ [
+  "Candidate",
+  "Department",
+  "department"
+ ],
+ [
+  "Candidate",
+  "Interview Date",
+  "interviewDate"
+ ],
+ [
+  "Candidate",
+  "Interview Time",
+  "interviewTime"
+ ],
+ [
+  "Candidate",
+  "Interview Format",
+  "interviewFormat"
+ ],
+ [
+  "Candidate",
+  "Interviewer Name",
+  "interviewerName"
+ ],
+ [
+  "Candidate",
+  "Offer Expiration",
+  "offerExpirationDate"
+ ],
+ [
+  "Candidate",
+  "Proposed Start Date",
+  "proposedStartDate"
+ ],
+ [
+  "Candidate",
+  "Compensation",
+  "compensation"
+ ],
+ [
+  "Preceptor",
+  "Preceptor Name",
+  "preceptorName"
+ ],
+ [
+  "Preceptor",
+  "Site",
+  "siteName"
+ ],
+ [
+  "Preceptor",
+  "Location",
+  "locationName"
+ ],
+ [
+  "Preceptor",
+  "Shift",
+  "shift"
+ ],
+ [
+  "Preceptor",
+  "Assigned Schedule Reference",
+  "assignedScheduleRef"
+ ],
+ [
+  "Placement Faculty/CI",
+  "Faculty Name",
+  "facultyName"
+ ],
+ [
+  "Placement Faculty/CI",
+  "School",
+  "schoolName"
+ ],
+ [
+  "Placement Faculty/CI",
+  "Student Roster Reference",
+  "studentRosterRef"
+ ],
+ [
+  "Student",
+  "Student Name",
+  "studentName"
+ ],
+ [
+  "Student",
+  "Email",
+  "email"
+ ],
+ [
+  "Student",
+  "School",
+  "school"
+ ],
+ [
+  "Student",
+  "Program",
+  "program"
+ ],
+ [
+  "Student",
+  "Cohort",
+  "cohort"
+ ],
+ [
+  "Student",
+  "Rotation Name",
+  "rotationName"
+ ],
+ [
+  "Student",
+  "Start Date",
+  "startDate"
+ ],
+ [
+  "Student",
+  "End Date",
+  "endDate"
+ ],
+ [
+  "Student",
+  "Location",
+  "locationName"
+ ],
+ [
+  "Student",
+  "Hospital",
+  "hospitalName"
+ ],
+ [
+  "Student",
+  "Onboarding Status",
+  "onboardingStatus"
+ ],
+ [
+  "Student",
+  "Onboarding Deadline",
+  "onboardingDeadline"
+ ],
+ [
+  "Student",
+  "Preceptor Name",
+  "preceptorName"
+ ],
+ [
+  "Student",
+  "Login URL",
+  "loginUrl"
+ ],
+ [
+  "School Contact",
+  "Contact Name",
+  "schoolContactName"
+ ],
+ [
+  "School Contact",
+  "School Name",
+  "schoolName"
+ ],
+ [
+  "School Contact",
+  "Coordinator Name",
+  "coordinatorName"
+ ],
+ [
+  "School Contact",
+  "Availability Name",
+  "availabilityName"
+ ],
+ [
+  "School Contact",
+  "Approved Slot Count",
+  "approvedSlotCount"
+ ],
+ [
+  "School Contact",
+  "Start Date",
+  "startDate"
+ ],
+ [
+  "School Contact",
+  "End Date",
+  "endDate"
+ ],
+ [
+  "School Contact",
+  "Location",
+  "locationName"
+ ],
+ [
+  "School Contact",
+  "Hospital",
+  "hospitalName"
+ ],
+ [
+  "School Contact",
+  "Submitted Date",
+  "submittedDate"
+ ]
+]
